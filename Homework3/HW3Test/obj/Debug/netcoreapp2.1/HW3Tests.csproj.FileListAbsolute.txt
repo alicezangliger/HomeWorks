@@ -1,0 +1,17 @@
+D:\C#\Homework3\HW3Test\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\C#\Homework3\HW3Test\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\C#\Homework3\HW3Test\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\C#\Homework3\HW3Test\bin\Debug\netcoreapp2.1\HW3Tests.deps.json
+D:\C#\Homework3\HW3Test\bin\Debug\netcoreapp2.1\HW3Tests.runtimeconfig.json
+D:\C#\Homework3\HW3Test\bin\Debug\netcoreapp2.1\HW3Tests.runtimeconfig.dev.json
+D:\C#\Homework3\HW3Test\bin\Debug\netcoreapp2.1\HW3Tests.dll
+D:\C#\Homework3\HW3Test\bin\Debug\netcoreapp2.1\HW3Tests.pdb
+D:\C#\Homework3\HW3Test\bin\Debug\netcoreapp2.1\Homework3.dll
+D:\C#\Homework3\HW3Test\bin\Debug\netcoreapp2.1\Homework3.pdb
+D:\C#\Homework3\HW3Test\obj\Debug\netcoreapp2.1\HW3Tests.csprojAssemblyReference.cache
+D:\C#\Homework3\HW3Test\obj\Debug\netcoreapp2.1\HW3Tests.csproj.CoreCompileInputs.cache
+D:\C#\Homework3\HW3Test\obj\Debug\netcoreapp2.1\HW3Tests.AssemblyInfoInputs.cache
+D:\C#\Homework3\HW3Test\obj\Debug\netcoreapp2.1\HW3Tests.AssemblyInfo.cs
+D:\C#\Homework3\HW3Test\obj\Debug\netcoreapp2.1\HW3Tests.csproj.CopyComplete
+D:\C#\Homework3\HW3Test\obj\Debug\netcoreapp2.1\HW3Tests.dll
+D:\C#\Homework3\HW3Test\obj\Debug\netcoreapp2.1\HW3Tests.pdb
