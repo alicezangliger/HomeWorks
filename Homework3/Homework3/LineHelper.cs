@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace Homework3
 {
@@ -17,7 +16,11 @@ namespace Homework3
         {
             int j = 0;
             int length = 32;                                 //array length constant
-            if (str1 != "")
+            if (str1 == null)
+            {
+                throw new ArgumentNullException();
+            }
+            if (str1 != string.Empty)
             {
                 if (!(str1[j] >= 32 && str1[j] <= 64))
                 {
@@ -44,7 +47,11 @@ namespace Homework3
         {
             int j = 0;
             int length = 32;                                //array length constant
-            if (str2 != "")
+            if (str2 == null)
+            {
+                throw new ArgumentNullException();
+            }
+            if (str2 != string.Empty)
             {
                 if (!(str2[j] >= 32 && str2[j] <= 64 ))
                 {

@@ -8,32 +8,17 @@ namespace HW3Tests
     public class HWork3Tests
     {
         [TestMethod]
-        public void Test_TranslationFromRussian()
+        [DataRow("Зубная щётка нуждается в замене", "Zubnaya schyotka nuzhdaetsya v zamene")]        
+        public void Test_TranslationFromRussian(string str,string expected)
         {
-            // Arrange
-            string myString = "Зубная щётка нуждается в замене";
-            string expected = "Zubnaya schyotka nuzhdaetsya v zamene";
-
-            // Act
-            LineHelper line = new LineHelper();
-            string actual = LineHelper.RussianToTranslit(myString);
-
-            // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, LineHelper.RussianToTranslit(str));            
         }
         [TestMethod]
-        public void Test_TranslationToRussian()
+        [DataRow("Zubnaya schyotka nuzhdaetsya v zamene", "Зубная щётка нуждается в замене")]
+        public void Test_TranslationToRussian(string str, string expected)
         {
-            // Arrange
-            string myString = "Zubnaya schyotka nuzhdaetsya v zamene";
-            string expected = "Зубная щётка нуждается в замене";
-
-            // Act
-            LineHelper line = new LineHelper();
-            string actual = LineHelper.TranslitToRussian(myString);
-
-            // Assert
-            Assert.AreEqual(expected, actual);
+       
+            Assert.AreEqual(expected, LineHelper.TranslitToRussian(str));        
         }
         [ExpectedException(typeof (ArgumentException),"Exception was not thrown")]
         [TestMethod]
@@ -49,15 +34,15 @@ namespace HW3Tests
         }
         [ExpectedException(typeof(Exception), "Exception was not thrown")]
         [TestMethod]
-        public void Test_TranslationFromRussian_Null()
+        public void Test_TranslationFromRussian_Empty()
         {
-            LineHelper.RussianToTranslit("");
+            LineHelper.RussianToTranslit(string.Empty);
         }
         [ExpectedException(typeof(Exception), "Exception was not thrown")]
         [TestMethod]
-        public void Test_TranslationToRussian_Null()
+        public void Test_TranslationToRussian_Empty()
         {
-            LineHelper.TranslitToRussian("");
+            LineHelper.TranslitToRussian(string.Empty);
         }
         [ExpectedException(typeof(ArgumentException), "Exception was not thrown")]
         [TestMethod]
@@ -70,6 +55,18 @@ namespace HW3Tests
         public void Test_TranslationToRussian_Symbols()
         {
             LineHelper.TranslitToRussian("!+$(%'");
+        }
+        [ExpectedException(typeof(ArgumentNullException), "Exception was not thrown")]
+        [TestMethod]
+        public void Test_TranslationFromRussian_Null()
+        {
+            LineHelper.RussianToTranslit(null);
+        }
+        [ExpectedException(typeof(ArgumentNullException), "Exception was not thrown")]
+        [TestMethod]
+        public void Test_TranslationToRussian_Null ()
+        {
+            LineHelper.TranslitToRussian(null);
         }
     }
 }
