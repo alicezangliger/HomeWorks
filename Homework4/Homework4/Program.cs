@@ -20,14 +20,14 @@ namespace Homework4
             driver.FindElement(By.Id("mailbox:password")).SendKeys(password + Keys.Enter);
 
             
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("/html/body/div[6]/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/nav/a[1]/div/div[3]/span/span")));
-            IWebElement unreadMessages = driver.FindElement(By.XPath("/html/body/div[6]/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/nav/a[1]/div/div[3]/span/span"));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//span[@class=\"badge__text\"]")));
+            IWebElement unreadMessages = driver.FindElement(By.XPath("//span[@class=\"badge__text\"]"));
             Console.WriteLine("***********************************");
             Console.WriteLine("Number of unread messages: " + unreadMessages.GetAttribute("innerText"));
             
 
-            driver.FindElement(By.XPath("/html/body/div[6]/div/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div/div/div[1]/div/div/div/a[1]/div[4]/div")).Click();
-            driver.FindElement(By.XPath("/html/body/div[6]/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/nav/a[1]")).Click();
+            driver.FindElement(By.XPath("//div[@class=\"llc__content\"]")).Click();
+            driver.FindElement(By.XPath("//a[contains(@href,\"inbox\")]")).Click();
             Console.WriteLine("***********************************");
             Console.WriteLine("Number of unread messages after 1 been opened: " + unreadMessages.GetAttribute("innerText"));
            
