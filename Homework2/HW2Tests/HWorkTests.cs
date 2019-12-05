@@ -7,95 +7,26 @@ namespace HW2Tests
     public class HWorkTests
     {
         [TestMethod]
-        public void Test_DifferenceOfElements()
+        [DataRow("rte555veaaaaaVVV9999teyrhfjsiw33333333sadhdwbdaSSSSSSS", 12)]
+        [DataRow("", 0)]
+        public void Test_DifferenceOfElements_Positive(string str, int expected)
         {
-            // Arrange
-            string myString = "rte555veaaaaaVVV9999teyrhfjsiw33333333sadhdwbdaSSSSSSS";
-            int expected = 12;
-
-            // Act
-            SymbolString symStr = new SymbolString();
-            int actual = SymbolString.DifferentElem(myString);
-
-            // Assert
-            Assert.AreEqual(expected, actual);
-
+            Assert.AreEqual(expected, SymbolString.DifferentElem(str));
         }
         [TestMethod]
-        public void Test_RepeatingOfNumbers()
+        [DataRow("rte555veaaaaaVVV9999teyrhfjsiw33333333sadhdwbdaSSSSSSS", 8)]
+        [DataRow("", 0)]
+        public void Test_RepeatingOfNumbers_Positive(string str, int expected)
         {
-            // Arrange
-            string myString = "rte555veaaaaaVVV9999teyrhfjsiw33333333sadhdwbdaSSSSSSS";
-            int expected = 8;
-
-            // Act
-            SymbolString symStr = new SymbolString();
-            int actual = SymbolString.EqualNumbers(myString);
-
-            // Assert
-            Assert.AreEqual(expected, actual);
-
+            Assert.AreEqual(expected, SymbolString.EqualNumbers(str));
         }
         [TestMethod]
-        public void Test_RepeatingOfLatinElem()
+        [DataRow("rte555veaaaaaVVV9999teyrhfjsiw33333333sadhdwbdaSSSSSSS", 7)]
+        [DataRow("", 0)]
+        public void Test_RepeatingOfLatinElem_Positive(string str, int expected)
         {
-            // Arrange
-            string myString = "rte555veaaaaaVVV9999teyrhfjsiw33333333sadhdwbdaSSSSSSS";
-            int expected = 7;
-
-            // Act
-            SymbolString symStr = new SymbolString();
-            int actual = SymbolString.EqualLatin(myString);
-
-            // Assert
-            Assert.AreEqual(expected, actual);
-
-        }
-
-        [TestMethod]
-        public void Test_DifferenceOfElements_whenEmpty()
-        {
-            // Arrange
-            string myString = "";
-            int expected = 0;
-
-            // Act
-            SymbolString symStr = new SymbolString();
-            int actual = SymbolString.DifferentElem(myString);
-
-            // Assert
-            Assert.AreEqual(expected, actual);
-
-        }
-        [TestMethod]
-        public void Test_RepeatingOfNumbers_whenEmpty()
-        {
-            // Arrange
-            string myString = "";
-            int expected = 0;
-
-            // Act
-            SymbolString symStr = new SymbolString();
-            int actual = SymbolString.EqualNumbers(myString);
-
-            // Assert
-            Assert.AreEqual(expected, actual);
-
-        }
-        [TestMethod]
-        public void Test_RepeatingOfLatinElem_whenEmpty()
-        {
-            // Arrange
-            string myString = "";
-            int expected = 0;
-
-            // Act
-            SymbolString symStr = new SymbolString();
-            int actual = SymbolString.EqualLatin(myString);
-
-            // Assert
-            Assert.AreEqual(expected, actual);
-
-        }
+            Assert.AreEqual(expected, SymbolString.EqualLatin(str));
+        }      
+       
     }
 }

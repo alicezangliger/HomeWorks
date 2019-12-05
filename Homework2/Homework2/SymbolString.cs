@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-
+﻿
 namespace Homework2
 {
     public class SymbolString
     {
-       public static int DifferentElem(string str)
+       public static int DifferentElem(string str)     //finding max number of different elements   
         {
             int count = 1;                      //counter to register the number of testing elements 
             int length = str.Length;            //length of the line
             int maxElem = 0;
-            for (int i = 0; i < length - 1; i++)     //finding max number of different elements
+            for (int i = 0; i < length - 1; i++)     
             {
                 if (str[i] != str[i + 1])
                 {
@@ -33,12 +28,12 @@ namespace Homework2
             return maxElem;
         }
 
-        public static int EqualNumbers(string str)
+        public static int EqualNumbers(string str)     //finding max number of repeating numbers
         {
             int count = 1;                      //counter to register the number of testing elements 
             int length = str.Length;            //length of the line
             int maxNumb = 0;
-            for (int i = 0; i < length - 1; i++)     //finding max number of repeating numbers
+            for (int i = 0; i < length - 1; i++)     
             {
                 if (str[i] >= 48 && str[i] <= 57)
                 {
@@ -61,12 +56,12 @@ namespace Homework2
             return maxNumb;
         }
 
-        public static int EqualLatin(string str)
+        public static int EqualLatin(string str)    //finding max number of repeating latin letters
         {
             int count = 1;                      //counter to register the number of testing elements 
             int length = str.Length;            //length of the line
             int maxLat = 0;
-            for (int i = 0; i < length - 1; i++)     //finding max number of repeating latin letters
+            for (int i = 0; i < length - 1; i++)     
             {
                 if ((str[i] >= 65 && str[i] <= 90) || (str[i] >= 97 && str[i] <= 122))
                 {
@@ -88,5 +83,6 @@ namespace Homework2
             }
             return maxLat;
         }
+      
     }
 }
