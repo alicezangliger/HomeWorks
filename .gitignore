@@ -1,0 +1,9 @@
+.dll
+.bin
+.log
+.pdb
+.json
+.cache
+.txt
+.props
+.targets
